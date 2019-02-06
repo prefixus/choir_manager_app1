@@ -5,15 +5,15 @@ abstract class Strings {
 
   factory Strings(var lang) {
     if (lang == 'polish') {
-      return new Strings_PL();
+      return new StringsPL();
     } else if (lang == 'english') {
-      return new Strings_EN();
+      return new StringsEN();
     } else
       throw FormatException('Language non existent!');
   }
 }
 
-class Strings_PL implements Strings {
+class StringsPL implements Strings {
   @override
   String accountScreen = 'Konto użytkownika';
 
@@ -24,7 +24,7 @@ class Strings_PL implements Strings {
   String settingsScreen = 'Ustawienia';
 }
 
-class Strings_EN implements Strings {
+class StringsEN implements Strings {
   @override
   String accountScreen = 'User Account';
 
