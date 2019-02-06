@@ -1,3 +1,4 @@
+import 'package:choir_manager_app1/localizations.dart';
 import 'package:choir_manager_app1/screens/account.dart';
 import 'package:choir_manager_app1/screens/settings.dart';
 import 'package:flutter/material.dart';
@@ -52,8 +53,11 @@ class HomeScreenState extends State<HomeScreen> {
         title: Text("Navigation Drawer for Choir Manager"),
       ),
       body: Container(
-          child: Center(child: Text("") // TODO: add stuff to home screen
-              )),
+          child: Center(
+              child: Text(MyLocalizations
+                  .of(context)
+                  .title) // TODO: add stuff to home screen
+          )),
       drawer: getNavDrawer(context),
     );
   }
